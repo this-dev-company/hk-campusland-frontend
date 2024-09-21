@@ -1,0 +1,163 @@
+.header {
+  height: 5vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #f4f5f7;
+  border-bottom: 1px solid #dfe1e6;
+}
+
+.header_nav {
+  display: flex;
+  padding: 10px 20px;
+}
+
+.header_logo img {
+  width: 100px;
+}
+
+.header_nav ul {
+  list-style: none;
+  display: flex;
+}
+
+.header_nav li {
+  margin: 0 15px;
+}
+
+.header_nav a {
+  text-decoration: none;
+  color: #1a1a1a;
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #eaebec;
+  box-shadow: 0 0 3px #c4c4c4;
+  transition: background-color 0.1s ease, transform 0.2s ease;
+}
+
+.header_nav a:hover {
+  background-color: #c4c4c4;
+  transform: scale(1.01)
+
+}
+
+.user-menu {
+  display: flex;
+  min-width: 100px;
+  max-width: 170px;
+  width: 10%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+  color: #1a1a1a;
+}
+
+.user-button,
+.config-button,
+.notif-button {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  color: #1a1a1a;
+}
+
+
+.config-button:hover,
+.notif-button:hover {
+  background-color: #f15a24;
+  border-radius: 50%;
+}
+
+
+.user-pic {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #172b4d;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 58px;
+  right: 1.8em;
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.dropdown-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.dropdown-menu li {
+  margin: 5px 0;
+}
+
+.dropdown-menu a {
+  text-decoration: none;
+  color: #172b4d;
+  display: block;
+}
+
+
+.config-menu {
+  position: absolute;
+  top: 58px;
+  right: 5.4rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 10;
+}
+
+.notif-menu {
+  position: absolute;
+  top: 58px;
+  right: 8.8rem;
+  width: 10rem;
+  height: 10rem;
+  background-color: white;
+  border: 1px solid #dfe1e6;
+  box-shadow: 0 0px 2px rgba(0, 0, 0, 0.15);
+  border-radius: 5px;
+  z-index: 10;
+}
+
+
+.notif-menu ul,
+.config-menu ul {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  list-style: none;
+  margin: 0;
+  padding: 10px;
+}
+
+.notif-menu li,
+.config-menu li {
+  margin: 5px 0;
+}
+
+.notif-menu a,
+.config-menu a {
+  text-decoration: none;
+  color: #172b4d;
+  display: block;
+}
