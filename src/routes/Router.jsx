@@ -3,10 +3,11 @@ import { createBrowserRouter, Outlet } from 'react-router-dom';
 import ProtectedRoute from './ProtectedRoute.jsx';
 import Navbar from '../components/Navbar/Navbar.jsx';
 import Header from '../components/Header/Header.jsx';
+import OrganizationPage from '../pages/OrganizationPage/OrganizationPage.jsx';
 
 const Auth = lazy(() => import('../components/Auth/Auth.jsx'));
 const Unauthorized = lazy(() => import('../components/Auth/Unauthorized.jsx'));
-const Dashboard = lazy(() => import('../pages/Dashboard.jsx'));
+const Dashboard = lazy(() => import('../pages/Dashboard/Dashboard.jsx'));
 const Proyects = lazy(() => import('../pages/Proyects.jsx'));
 const Calendar = lazy(() => import('../pages/Calendar.jsx'));
 const Board = lazy(() => import('../pages/Board.jsx'));
@@ -60,6 +61,16 @@ const Router = createBrowserRouter([
           <ProtectedRoute allowedRoles={['ADMIN', 'USER']}>
             <Suspense fallback={<div>Loading...</div>}>
               <Dashboard />
+            </Suspense>
+          </ProtectedRoute>
+        ),
+      },
+      {
+        path: '/:alias',
+        element: (
+          <ProtectedRoute allowedRoles={['ADMIN', 'USER']}>
+            <Suspense fallback={<div>Loading...</div>}>
+              <OrganizationPage />
             </Suspense>
           </ProtectedRoute>
         ),
