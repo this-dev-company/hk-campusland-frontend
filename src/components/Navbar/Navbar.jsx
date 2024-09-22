@@ -57,7 +57,7 @@ const Navbar = () => {
       </div>
       <div className="credit">
         This. Tracker <br />   
-        Version 0.0.1
+        Version 0.0.2
       </div>
     </nav>
   );
